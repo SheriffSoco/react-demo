@@ -1,4 +1,4 @@
-import Todo from "./components/Todo.js";
+import Todo from "./components/Todo";
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <div>
         <h1>My Todos</h1>
       </div>
-      <Todo />
+      <Todo title="Wash dishes" />
     </div>
   );
 }
