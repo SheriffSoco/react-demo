@@ -1,10 +1,12 @@
-import Todo from './Todo.js'
+import Todo from "./Todo.js";
 
 function App() {
   return (
     <div>
-      <h1>My Todos</h1>
-      <Todo/>
+      <div>
+        <h1>My Todos</h1>
+      </div>
+      <Todo />
     </div>
   );
 }
