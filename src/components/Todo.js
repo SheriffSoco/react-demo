@@ -9,6 +9,15 @@ function Todo(props) {
     setShowModal(true);
   }
 
+  function hideModal() {
+    setShowModal(false);
+  }
+
+  function deleteTodo() {
+    setShowModal(false);
+    props.delete();
+  }
+
   return (
     <div className="card">
       <h2>{props.title}</h2>
@@ -17,8 +26,8 @@ function Todo(props) {
           Delete
         </button>
       </div>
-      {showModal && <Modal />}
-      {showModal && <Backdrop />}
+      {showModal && <Modal cancel={hideModal} confirm={deleteTodo}/>}
+      {showModal && <Backdrop onClick={hideModal}/>}
     </div>
   );
 }
