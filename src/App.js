@@ -13,7 +13,7 @@ function App() {
       <div>
         <h1>My Todos</h1>
       </div>
-      {showTodo && <Todo title="Wash dishes" delete={hideTodo}/>}
+      {showTodo && <Todo title="Wash dishes" deleteComponent={hideTodo}/>}
     </div>
   );
 }

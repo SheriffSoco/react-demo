@@ -15,7 +15,7 @@ function Todo(props) {
 
   function deleteTodo() {
     setShowModal(false);
-    props.delete();
+    props.deleteComponent();
   }
 
   return (
@@ -26,7 +26,7 @@ function Todo(props) {
           Delete
         </button>
       </div>
-      {showModal && <Modal cancel={hideModal} confirm={deleteTodo}/>}
+      {showModal && <Modal onCancel={hideModal} onConfirm={deleteTodo}/>}
       {showModal && <Backdrop onClick={hideModal}/>}
     </div>
   );
